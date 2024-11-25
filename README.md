@@ -16,8 +16,13 @@ cd e2e-test-framework
 // Initialize devbox shell terminal
 devbox shell
 
-// Get list of possible commands
+// TBD Get list of possible commands
 pnpm run cli -- --help
 
-// TBD - add testing command
+// For running tests of local test-framework capabilities
+pnpm run scenarios-native 
+
+// For running tests of some platform testing
+pnpm run scenarios-platform 
+
 ```

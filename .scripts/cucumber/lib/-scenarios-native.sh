@@ -25,5 +25,5 @@ _cucumber_scenariosNative() {
     --loader ts-node/esm \
     --import "${CUCUMBER_CUCUMBER_PATH_REGEX}" \
     --import "${CUCUMBER_STEPS_PATH_REGEX}" \
-    "src/features/**/*.feature"
+    "src/scenarios/**/*.feature"
 }

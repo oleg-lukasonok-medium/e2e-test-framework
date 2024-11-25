@@ -1,0 +1,30 @@
+{
+  "name": "@lego-medium/e2e-tests-engine",
+  "private": true,
+  "packageManager": "pnpm@9.11.0",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "scenarios-native": "./.scripts/cucumber/api/scenarios-native.sh",
+    "scenarios-platform": "./.scripts/cucumber/api/scenarios-platform.sh"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.1.0",
+    "@cucumber/messages": "^27.0.2",
+    "util": "0.12.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.10",
+    "turbo": "^2.3.1",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6/.schema/devbox.schema.json",
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true"
+  },
+  "packages": [
+    "python@3.10",
+    "nodejs@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "alias npr=\"npm run\"",
+      ". $VENV_DIR/bin/activate",
+      "./.scripts/devbox/api/on-init-hook.sh"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}

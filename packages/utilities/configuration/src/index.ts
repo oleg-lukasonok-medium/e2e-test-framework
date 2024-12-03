@@ -3,7 +3,7 @@
  *
  * 
 **/
-const MODULE_ID = '@lego-medium/configuration-src-index'
+const MODULE_ID = `${import.meta.url}`
 import { getLogger } from '@lego-medium/loggers'
 const LOGGER = getLogger(MODULE_ID)
 
@@ -38,6 +38,7 @@ const load = async () => {
 const getConfiguration = (): IConfiguration => {
   return configuration
 }
+
 
 export { IConfiguration } from './schema'
 export { ICFG_Cucumber } from './cucumber'

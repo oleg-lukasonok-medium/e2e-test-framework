@@ -14,6 +14,7 @@ import {
   transformFromConfigurationRaw as transformFromConfigurationRaw4Defaults,
 } from './defaults'
 
+
 export const transformFromConfigurationRaw = async (
   configurationRaw: any,
 ): Promise<IConfiguration> => {

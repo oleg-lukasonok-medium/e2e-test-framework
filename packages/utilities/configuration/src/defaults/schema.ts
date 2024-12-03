@@ -1,7 +1,11 @@
 /**
  * 
- */
-import Joi from 'joi'
+ *
+ * 
+**/
+import {
+  Joi,
+} from '@lego-medium/wrappers-joi'
 
 export const schema = {
   messagesToBeSent: Joi.number().required(),

@@ -1,6 +1,8 @@
 /**
  * 
- */
+ *
+ * 
+**/
 import { ICFG_Cucumber } from './schema'
 
 export const transformFromConfigurationRaw = (

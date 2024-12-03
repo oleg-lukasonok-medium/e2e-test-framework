@@ -1,6 +1,8 @@
-/*
+/**
  * 
- */
+ *
+ * 
+**/
 export const CONFIGURATION_RAW_PREFIX_DEFAULTS = 'DEFAULTS'
 
 import { ICFG_Defaults } from './schema'

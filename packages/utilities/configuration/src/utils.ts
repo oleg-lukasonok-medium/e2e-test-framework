@@ -3,15 +3,14 @@
  *
  * 
 **/
-const MODULE_ID = '@lego-medium/configuration-src-utils'
+const MODULE_ID = `${import.meta.url}`
 import { getLogger } from '@lego-medium/loggers'
 const LOGGER = getLogger(MODULE_ID)
-
-import { config } from 'dotenv'
 
 import { lodash } from '@lego-medium/wrappers-lodash'
 import { ramda } from '@lego-medium/wrappers-ramda'
 
+import { config } from 'dotenv'
 
 let raw: any
 

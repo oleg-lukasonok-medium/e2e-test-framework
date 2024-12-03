@@ -1,5 +1,5 @@
 {
-  "name": "@lego-medium/configuration",
+  "name": "@lego-medium/context-interfaces",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -9,12 +9,8 @@
     "build": "rimraf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "clean": "rimraf dist node_modules",
     "typecheck": "tsc"
-  },
+  }, 
   "dependencies": {
-    "@lego-medium/wrappers-lodash": "workspace:*",
-    "@lego-medium/wrappers-ramda": "workspace:*",
-    "@lego-medium/wrappers-joi": "workspace:*", 
-    "@lego-medium/loggers": "workspace:*", 
-    "dotenv": "16.4.5"
+    "@lego-medium/configuration": "workspace:*"
   }
 }

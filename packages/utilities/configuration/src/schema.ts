@@ -3,7 +3,9 @@
  *
  * 
 **/
-import Joi from 'joi'
+import {
+  Joi,
+} from '@lego-medium/wrappers-joi'
 
 import {
   schema as schema4Cucumber,

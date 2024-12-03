@@ -69,6 +69,9 @@ importers:
       '@lego-medium/loggers':
         specifier: workspace:*
         version: link:../loggers
+      '@lego-medium/wrappers-joi':
+        specifier: workspace:*
+        version: link:../../wrappers/joi
       '@lego-medium/wrappers-lodash':
         specifier: workspace:*
         version: link:../../wrappers/lodash
@@ -78,24 +81,27 @@ importers:
       dotenv:
         specifier: 16.4.5
         version: 16.4.5
-      joi:
-        specifier: 17.13.3
-        version: 17.13.3
 
   packages/utilities/context:
     dependencies:
       '@lego-medium/configuration':
         specifier: workspace:*
         version: link:../configuration
+      '@lego-medium/context-interfaces':
+        specifier: workspace:*
+        version: link:../context-interfaces
       '@lego-medium/loggers':
         specifier: workspace:*
         version: link:../loggers
       '@lego-medium/wrappers-lodash':
         specifier: workspace:*
         version: link:../../wrappers/lodash
-      '@lego-medium/wrappers-ramda':
+
+  packages/utilities/context-interfaces:
+    dependencies:
+      '@lego-medium/configuration':
         specifier: workspace:*
-        version: link:../../wrappers/ramda
+        version: link:../configuration
 
   packages/utilities/loggers:
     dependencies:
@@ -105,6 +111,12 @@ importers:
       '@lego-medium/wrappers-winston':
         specifier: workspace:*
         version: link:../../wrappers/winston
+
+  packages/wrappers/joi:
+    dependencies:
+      joi:
+        specifier: 17.13.3
+        version: 17.13.3
 
   packages/wrappers/lodash:
     dependencies:

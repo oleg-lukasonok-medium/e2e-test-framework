@@ -11,8 +11,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@lego-medium/context-interfaces": "workspace:*",
     "@lego-medium/wrappers-lodash": "workspace:*",
-    "@lego-medium/wrappers-ramda": "workspace:*",
     "@lego-medium/loggers": "workspace:*",
     "@lego-medium/configuration": "workspace:*"
   }

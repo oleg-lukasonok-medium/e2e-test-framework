@@ -17,12 +17,7 @@ import {
 let context: IContext
 
 const initialize = async (
-    _params?: {
-        skipNavifyAwsSsoSession?: boolean,
-        skipNPeiEdgesKubeConfigDownload?: boolean,
-        skipNiEdge?: boolean,
-        skipVirtual?: boolean,
-    }
+    _params?: any,
 ): Promise<IContext> => {
     try {
         LOGGER.debug({

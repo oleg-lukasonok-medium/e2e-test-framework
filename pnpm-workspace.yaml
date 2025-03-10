@@ -1,4 +1,5 @@
 packages:
   - packages/wrappers/*
   - packages/utilities/*
+  - packages/observability/*
   - applications/*

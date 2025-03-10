@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@lego-medium/wrappers-chai": "workspace:*",
+    "@lego-medium/wrappers-lodash": "workspace:*",
     "@lego-medium/configuration": "workspace:*",
     "@lego-medium/context": "workspace:*",
     "@lego-medium/loggers": "workspace:*",

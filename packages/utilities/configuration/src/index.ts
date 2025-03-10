@@ -44,6 +44,7 @@ const getConfiguration = (): IConfiguration => {
 export { IConfiguration } from './schema'
 export { ICFG_Cucumber } from './cucumber'
 export { CONFIGURATION_RAW_PREFIX_DEFAULTS, ICFG_Defaults } from './defaults'
+export { CONFIGURATION_RAW_PREFIX_AWS_ACCOUNT, ICFG_AwsAccount } from './aws-accounts'
 
 export const configurationModule = {
   load,

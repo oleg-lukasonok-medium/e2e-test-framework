@@ -15,9 +15,11 @@
   },
   "dependencies": {
     "@lego-medium/wrappers-chai": "workspace:*",
+    "@lego-medium/wrappers-lodash": "workspace:*",
     "@lego-medium/configuration": "workspace:*",
     "@lego-medium/context": "workspace:*",
     "@lego-medium/loggers": "workspace:*",
-    "@lego-medium/cucumber-extensions": "workspace:*"
+    "@lego-medium/cucumber-extensions": "workspace:*",
+    "@lego-medium/opentelemetry": "workspace:*"
   }
 }

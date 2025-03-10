@@ -136,4 +136,5 @@ dist
 .turbo
 .venv
 
-
+# allure-results
+target/allure-results/*

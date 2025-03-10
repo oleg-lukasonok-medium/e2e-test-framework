@@ -48,6 +48,9 @@ importers:
       '@lego-medium/context':
         specifier: workspace:*
         version: link:../../packages/utilities/context
+      '@lego-medium/cucumber-extensions':
+        specifier: workspace:*
+        version: link:../../packages/utilities/cucumber-extensions
       '@lego-medium/loggers':
         specifier: workspace:*
         version: link:../../packages/utilities/loggers
@@ -60,6 +63,9 @@ importers:
       '@lego-medium/context':
         specifier: workspace:*
         version: link:../../packages/utilities/context
+      '@lego-medium/cucumber-extensions':
+        specifier: workspace:*
+        version: link:../../packages/utilities/cucumber-extensions
       '@lego-medium/loggers':
         specifier: workspace:*
         version: link:../../packages/utilities/loggers
@@ -102,6 +108,12 @@ importers:
       '@lego-medium/configuration':
         specifier: workspace:*
         version: link:../configuration
+
+  packages/utilities/cucumber-extensions:
+    dependencies:
+      '@lego-medium/loggers':
+        specifier: workspace:*
+        version: link:../loggers
 
   packages/utilities/loggers:
     dependencies:
@@ -1211,7 +1223,7 @@ snapshots:
       '@cucumber/ci-environment': 10.0.1
       '@cucumber/cucumber-expressions': 18.0.1
       '@cucumber/gherkin': 30.0.4
-      '@cucumber/gherkin-streams': 5.0.1(@cucumber/gherkin@30.0.4)(@cucumber/message-streams@4.0.1(@cucumber/messages@27.0.2))(@cucumber/messages@27.0.2)
+      '@cucumber/gherkin-streams': 5.0.1(@cucumber/gherkin@30.0.4)(@cucumber/message-streams@4.0.1(@cucumber/messages@27.2.0))(@cucumber/messages@27.0.2)
       '@cucumber/gherkin-utils': 9.0.0
       '@cucumber/html-formatter': 21.7.0(@cucumber/messages@27.0.2)
       '@cucumber/junit-xml-formatter': 0.7.1(@cucumber/messages@27.0.2)
@@ -1250,7 +1262,7 @@ snapshots:
       yaml: 2.7.0
       yup: 1.2.0
 
-  '@cucumber/gherkin-streams@5.0.1(@cucumber/gherkin@30.0.4)(@cucumber/message-streams@4.0.1(@cucumber/messages@27.0.2))(@cucumber/messages@27.0.2)':
+  '@cucumber/gherkin-streams@5.0.1(@cucumber/gherkin@30.0.4)(@cucumber/message-streams@4.0.1(@cucumber/messages@27.2.0))(@cucumber/messages@27.0.2)':
     dependencies:
       '@cucumber/gherkin': 30.0.4
       '@cucumber/message-streams': 4.0.1(@cucumber/messages@27.0.2)

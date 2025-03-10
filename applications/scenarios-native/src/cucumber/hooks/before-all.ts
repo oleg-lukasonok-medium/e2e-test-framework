@@ -1,7 +1,7 @@
 /**
  * 
  */
-const MODULE_ID = '@lego-medium/scenarios-native-src-cucumber-hooks-before-all'
+const MODULE_ID = `${import.meta.url}`
 import { getLogger } from '@lego-medium/loggers'
 const LOGGER = getLogger(MODULE_ID)
 

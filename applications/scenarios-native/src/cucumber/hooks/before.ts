@@ -1,7 +1,7 @@
 /**
  * 
  */
-// const MODULE_ID = '@lego-medium/scenarios-native-src-cucumber-hooks-before'
+// const MODULE_ID = `${import.meta.url}`
 // import { getLogger } from '@lego-medium/loggers'
 // const LOGGER = getLogger(MODULE_ID)
 
@@ -12,16 +12,16 @@ import {
   setWorldConstructor
 } from '@cucumber/cucumber'
 
-import { WordExtended } from '../world-extended'
+import { WorldExtended } from '@lego-medium/cucumber-extensions'
 
-setWorldConstructor(WordExtended)
+setWorldConstructor(WorldExtended)
 
 Before(
-  function (this: WordExtended, scenario: ITestCaseHookParameter) {
+  function (this: WorldExtended, scenario: ITestCaseHookParameter) {
     this.setScenario(scenario)
   }
 )
 
-AfterStep(function (this: WordExtended) {
+AfterStep(function (this: WorldExtended) {
   this.currentStepIndex++
 })

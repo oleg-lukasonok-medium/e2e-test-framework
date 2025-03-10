@@ -6,6 +6,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "code-format:apply": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "code-format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "scenarios-native": "./.scripts/cucumber/api/scenarios-native.sh",

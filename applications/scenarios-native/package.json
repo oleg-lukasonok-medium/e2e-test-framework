@@ -16,6 +16,7 @@
   "dependencies": {
     "@lego-medium/configuration": "workspace:*",
     "@lego-medium/context": "workspace:*",
-    "@lego-medium/loggers": "workspace:*"
+    "@lego-medium/loggers": "workspace:*", 
+    "@lego-medium/cucumber-extensions": "workspace:*"
   }
 }

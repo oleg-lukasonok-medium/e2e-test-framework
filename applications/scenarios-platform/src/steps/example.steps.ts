@@ -1,7 +1,7 @@
 /**
  * 
  */
-const MODULE_ID = '@lego-medium/tests-native-src-steps'
+const MODULE_ID = `${import.meta.url}`
 import { getLogger } from '@lego-medium/loggers'
 const LOGGER = getLogger(MODULE_ID)
 
@@ -9,9 +9,7 @@ import { Given, When, Then } from '@cucumber/cucumber'
 
 import assert from 'assert'
 
-import {
-  WordExtended,
-} from '../cucumber/world-extended'
+import { WorldExtended } from '@lego-medium/cucumber-extensions'
 
 let num1: number
 let num2: number
@@ -20,7 +18,7 @@ let result: number
 Given(
   'I have the numbers {int} and {int}',
   async function (
-    this: WordExtended,
+    this: WorldExtended,
     a: number,
     b: number,
   ) {
@@ -40,7 +38,7 @@ Given(
 When(
   'I add the numbers',
   async function (
-    this: WordExtended,
+    this: WorldExtended,
   ) {
     const ACTION = this.getActionName()
     result = num1 + num2
@@ -56,7 +54,7 @@ When(
 Then(
   'the result should be {int}',
   async function (
-    this: WordExtended,
+    this: WorldExtended,
     expected: number,
   ) {
     const ACTION = this.getActionName()

@@ -9,7 +9,6 @@
   ],
   "shell": {
     "init_hook": [
-      "alias npr=\"npm run\"",
       ". $VENV_DIR/bin/activate",
       "./.scripts/devbox/api/on-init-hook.sh"
     ],

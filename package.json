@@ -1,7 +1,8 @@
 {
   "name": "@lego-medium/e2e-tests-engine",
+  "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@10.0.0",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",

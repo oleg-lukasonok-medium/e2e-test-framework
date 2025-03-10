@@ -1,31 +1,52 @@
 /**
  * 
- *
- * 
 **/
 const MODULE_ID = `${import.meta.url}`
 import { getLogger } from '@lego-medium/loggers'
 const LOGGER = getLogger(MODULE_ID)
 
+import { config } from 'dotenv'
+
 import { lodash } from '@lego-medium/wrappers-lodash'
 import { ramda } from '@lego-medium/wrappers-ramda'
 
-import { config } from 'dotenv'
+import { fileSystemModule } from '@lego-medium/file-system'
 
 let raw: any
 
 export const loadRaw = async () => {
-  config({ path: process.env.ENV_VARS_PATH ? process.env.ENV_VARS_PATH : '.env-local' }).parsed
-  raw = process.env;
-  LOGGER.debug({
-    action: loadRaw.name,
-    message: 'Loaded raw configuration'
-  })
-  if (
-    !raw
-  ) {
-    const ERROR_MESSAGE = `Missing raw configuration - expected to be here: process.env.ENV_VARS_PATH ${process.env.ENV_VARS_PATH}`
-    throw new Error(ERROR_MESSAGE)
+  let fileEnvVars
+  let fileEnvVarsCredentials
+  try {
+    if (
+      lodash.isEmpty(process.env.E2E_TF_ENVIRONMENT)
+    ) {
+      const ERROR_MESSAGE = `Environment variable E2E_TF_ENVIRONMENT is missing.`
+      throw ERROR_MESSAGE
+    }
+    const PATH_ABS_ROOT = fileSystemModule.getDirectoryAbsRoot()
+    fileEnvVars = `${PATH_ABS_ROOT}/.env-${process.env.E2E_TF_ENVIRONMENT}`
+    fileEnvVarsCredentials = `${PATH_ABS_ROOT}/.env-${process.env.E2E_TF_ENVIRONMENT}-credentials`
+    const LOADED_ENV = config({ path: [fileEnvVars, fileEnvVarsCredentials] }).parsed
+    raw = {
+      ...process.env,
+      LOADED_ENV,
+    }
+    if (
+      !raw
+    ) {
+      const ERROR_MESSAGE = `Missing raw configuration - expected to be here: process.env.ENV_VARS_PATH ${process.env.ENV_VARS_PATH}`
+      throw new Error(ERROR_MESSAGE)
+    }
+  } catch (error) {
+    LOGGER.error({
+      action: loadRaw.name,
+      message: `Caught error: ${error}`,
+      data: {
+        fileEnvVars,
+        fileEnvVarsCredentials,
+      }
+    })
   }
 }
 

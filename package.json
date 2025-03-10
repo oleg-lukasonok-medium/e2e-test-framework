@@ -8,6 +8,7 @@
     "dev": "turbo dev",
     "code-format:apply": "prettier --write \"**/*.{ts,tsx,md}\"",
     "code-format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "cli": "./.scripts/cli/api/execute-action.sh",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "scenarios-native": "./.scripts/cucumber/api/scenarios-native.sh",
@@ -19,6 +20,7 @@
     "util": "0.12.5"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.20",
     "@types/node": "^22.9.3",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",

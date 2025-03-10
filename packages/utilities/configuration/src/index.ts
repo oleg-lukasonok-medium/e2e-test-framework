@@ -25,7 +25,8 @@ const load = async () => {
   if (
     VALIDATION_RESULT?.error
   ) {
-    const ERROR_MESSAGE = 'Cought error while validating configuration!'
+    console.log(VALIDATION_RESULT)
+    const ERROR_MESSAGE = `Cought error while validating configuration - error: ${VALIDATION_RESULT?.error}`
     LOGGER.error({
       action: load.name,
       message: ERROR_MESSAGE

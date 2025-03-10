@@ -1,5 +1,5 @@
 {
-  "name": "@lego-medium/scenarios-platform",
+  "name": "@lego-medium/cli",
   "type": "module",
   "main": "dist/index.js",
   "module": "src/index.ts",
@@ -11,13 +11,12 @@
     "start": "node dist/index.js",
     "typecheck": "tsc",
     "deps": "pnpm ls --depth Infinity",
-    "cucumber-js": "cucumber-js"
+    "cli": "ts-node dist/index.js"
   },
   "dependencies": {
-    "@lego-medium/wrappers-chai": "workspace:*",
     "@lego-medium/configuration": "workspace:*",
-    "@lego-medium/context": "workspace:*",
     "@lego-medium/loggers": "workspace:*",
-    "@lego-medium/cucumber-extensions": "workspace:*"
+    "@lego-medium/context-interfaces": "workspace:*",
+    "@lego-medium/context": "workspace:*"
   }
 }

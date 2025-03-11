@@ -25,7 +25,8 @@ const load = async () => {
   if (
     VALIDATION_RESULT?.error
   ) {
-    const ERROR_MESSAGE = 'Cought error while validating configuration!'
+    console.log(VALIDATION_RESULT)
+    const ERROR_MESSAGE = `Cought error while validating configuration - error: ${VALIDATION_RESULT?.error}`
     LOGGER.error({
       action: load.name,
       message: ERROR_MESSAGE
@@ -43,6 +44,7 @@ const getConfiguration = (): IConfiguration => {
 export { IConfiguration } from './schema'
 export { ICFG_Cucumber } from './cucumber'
 export { CONFIGURATION_RAW_PREFIX_DEFAULTS, ICFG_Defaults } from './defaults'
+export { CONFIGURATION_RAW_PREFIX_AWS_ACCOUNT, ICFG_AwsAccount } from './aws-accounts'
 
 export const configurationModule = {
   load,

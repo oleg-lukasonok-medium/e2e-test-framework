@@ -13,8 +13,9 @@
   "dependencies": {
     "@lego-medium/wrappers-lodash": "workspace:*",
     "@lego-medium/wrappers-ramda": "workspace:*",
-    "@lego-medium/wrappers-joi": "workspace:*", 
-    "@lego-medium/loggers": "workspace:*", 
+    "@lego-medium/wrappers-joi": "workspace:*",
+    "@lego-medium/loggers": "workspace:*",
+    "@lego-medium/file-system": "workspace:*",
     "dotenv": "16.4.5"
   }
 }

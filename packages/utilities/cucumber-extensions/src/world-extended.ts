@@ -1,17 +1,19 @@
 /**
  * 
  */
-// const MODULE_ID = '@lego-medium-scenarios-platform-src-cucumber-world-index'
+// const MODULE_ID = `${import.meta.url}`
 // import { getLogger } from '@lego-medium/loggers'
 // const LOGGER = getLogger(MODULE_ID)
 
 import { ITestCaseHookParameter, World } from '@cucumber/cucumber'
 import { Pickle } from '@cucumber/messages'
 
-export class WordExtended extends World {
+export class WorldExtended extends World {
 
   scenario?: ITestCaseHookParameter
   currentStepIndex: number = 0
+
+  data: any = {}
 
   constructor(options: any) {
     super(options)

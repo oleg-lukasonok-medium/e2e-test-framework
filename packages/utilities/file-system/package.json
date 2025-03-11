@@ -1,0 +1,17 @@
+{
+  "name": "@lego-medium/file-system",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "clean": "rimraf dist node_modules",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@lego-medium/wrappers-fs-extra": "workspace:*",
+    "@lego-medium/loggers": "workspace:*"
+  }
+}

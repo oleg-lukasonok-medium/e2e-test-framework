@@ -1,7 +1,5 @@
 /**
  * 
- *
- * 
 **/
 import {
   IConfiguration,
@@ -10,10 +8,14 @@ import {
 import {
   transformFromConfigurationRaw as transformFromConfigurationRaw4Cucumber,
 } from './cucumber'
+
 import {
   transformFromConfigurationRaw as transformFromConfigurationRaw4Defaults,
 } from './defaults'
 
+import {
+  transformFromConfigurationRaw as transformFromConfigurationRaw4AwsAccounts,
+} from './aws-accounts'
 
 export const transformFromConfigurationRaw = async (
   configurationRaw: any,
@@ -21,6 +23,7 @@ export const transformFromConfigurationRaw = async (
   const RET_VAL = {
     cucumber: transformFromConfigurationRaw4Cucumber(configurationRaw),
     defaults: transformFromConfigurationRaw4Defaults(configurationRaw),
+    awsAccounts: transformFromConfigurationRaw4AwsAccounts(configurationRaw),
   }
   return RET_VAL
 }

@@ -11,18 +11,17 @@ git clone https://github.com/oleg-lukasonok-medium/e2e-test-framework.git
 //
 cd e2e-test-framework
 
+// Create .env file   -> Specify  E2E_TF_ENVIRONMENT="local"
+
 // Create .env-local file
+
+// Create .env-local-credentials file
 
 // Initialize devbox shell terminal
 devbox shell
 
-// TBD Get list of possible commands
+// Get list of possible commands
 pnpm run cli -- --help
 
-// For running tests of local test-framework capabilities
-pnpm run scenarios-native 
-
-// For running tests of some platform testing
-pnpm run scenarios-platform 
 
 ```

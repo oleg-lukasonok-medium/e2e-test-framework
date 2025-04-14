@@ -36,12 +36,12 @@ export default class Reporter extends CucumberJSAllureFormatter {
           {
             pattern: [/@issue=(.*)/],
             type: 'issue',
-            urlTemplate: 'https://navifypoc.atlassian.net/browse/%s',
+            urlTemplate: 'https://lego.atlassian.net/browse/%s',
           },
           {
             pattern: [/@link=(.*)/],
             type: 'tms',
-            urlTemplate: 'https://navifypoc.atlassian.net/browse/%s',
+            urlTemplate: 'https://lego.atlassian.net/browse/%s',
           },
         ],
       },
